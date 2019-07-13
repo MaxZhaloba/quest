@@ -1,0 +1,9 @@
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+.video {
+    display: inline;
+    width: 49.5%;
+}
