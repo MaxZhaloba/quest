@@ -7,3 +7,9 @@ html, body {
     display: inline;
     width: 49.5%;
 }
+
+#log {
+    display: block;
+    width: 99%;
+    height: 20vh;
+}
