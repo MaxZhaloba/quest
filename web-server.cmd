@@ -1,3 +1,3 @@
 @echo off
-start lib\miniweb -r src -p 8080
-lib\ngrok http 8080
+start lib\miniweb -r src -p 80
+lib\ngrok http 80
