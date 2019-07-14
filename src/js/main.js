@@ -23,7 +23,9 @@ if(navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
             video.srcObject = stream;
             video.play();
         };
-    });
+    }).catch(function (error) {
+        log("Something went wrong!");
+    });;
 }
 
 function log(string) {
