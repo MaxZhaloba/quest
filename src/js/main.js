@@ -5,7 +5,9 @@ var playButton = document.getElementById('play');
 log("DOM Ready");
 
 if(navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
-    navigator.mediaDevices.getUserMedia({ video: true }).then(function(stream) {
+    var mediaConstraints = { video: { facingMode: { exact: "environment"}}};
+
+    navigator.mediaDevices.getUserMedia(mediaConstraints).then(function(stream) {
         log("getUserMedia callback");
 
         playButton.addEventListener('click', function() {
