@@ -3,6 +3,13 @@ html, body {
     padding: 0;
 }
 
+#play {
+    display: block;
+    width: 50%;
+    height: 10vh;
+    margin: 0 auto;
+}
+
 .video {
     display: inline;
     width: 49.5%;

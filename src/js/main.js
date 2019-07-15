@@ -1,6 +1,7 @@
 // Grab elements, create settings, etc.
 var videos = document.getElementsByClassName('video');
 var logArea = document.getElementById('log');
+var playButton = document.getElementById('play');
 
 log("start");
 
@@ -18,13 +19,19 @@ if(navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
 //        log(stream.getVideoTracks());
         var tracks = stream.getVideoTracks();
         log("tacks: " + tracks.length);
-        for (let video of videos) {
-//            console.log(stream);
-            video.srcObject = stream;
-            video.play();
-        };
+
+        playButton.addEventListener('click', function() {
+            for (let video of videos) {
+    //            console.log(stream);
+                video.srcObject = stream;
+                log(video.play);
+                video.play();
+            };
+        });
+
     }).catch(function (error) {
         log("Something went wrong!");
+        log(error);
     });;
 }
 
