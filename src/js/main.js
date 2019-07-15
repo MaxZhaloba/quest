@@ -14,6 +14,7 @@ if(navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
                 video.srcObject = stream;
                 video.play();
             };
+            playButton.classList.add("hidden");
         });
     }).catch(function (error) {
         log("Something went wrong!");
