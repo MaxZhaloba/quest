@@ -28,6 +28,7 @@ if(navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
     });;
 }
 
-function log(string) {
-    logArea.value = logArea.value + string + "\n";
+function log(...args) {
+    console.log(...args);
+    logArea.value = logArea.value + arguments + "\n";
 }
