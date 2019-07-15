@@ -21,7 +21,7 @@ if(navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
     }).catch(function (error) {
         log("Something went wrong!");
         log(error);
-    });;
+    });
 }
 
 function log(...args) {
