@@ -13,6 +13,7 @@ html, body {
     margin-top: -10vh;
     margin-left: -35vw;
     font-size: 10vh;
+    z-index: 10;
 }
 #play.hidden {
     display: none;
