@@ -4,24 +4,38 @@ var playButton = document.getElementById('play');
 
 log("DOM Ready");
 
-if(navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
-    var mediaConstraints = { video: { facingMode: { exact: "environment"}}};
+playButton.addEventListener('click', function() {
+    log("Starting video");
+    if(navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
+        var mediaModes = [
+            { video: { facingMode: { exact: "environment"}}} ,
+            { video: true} // Fallback for desktop
+        ];
 
-    navigator.mediaDevices.getUserMedia(mediaConstraints).then(function(stream) {
-        log("getUserMedia callback");
+        initCamera(mediaModes);
+    }
+});
 
-        playButton.addEventListener('click', function() {
-            log("Starting video");
+function initCamera(mediaModes, modeNumber=0) {
+    var mediaMode = mediaModes[modeNumber];
+
+    if (mediaMode) {
+        navigator.mediaDevices.getUserMedia(mediaMode).then(function(stream) {
+            log("getUserMedia callback");
             for (let video of videos) {
                 video.srcObject = stream;
                 video.play();
             };
             playButton.classList.add("hidden");
+            log("Video started");
+        }).catch(function (error) {
+            log("Failed to initialize camera using media mode No " + modeNumber);
+            log(error);
+            initCamera(mediaModes, 1+modeNumber)
         });
-    }).catch(function (error) {
-        log("Something went wrong!");
-        log(error);
-    });
+    } else {
+        log("No supported video modes detected");
+    }
 }
 
 function log(...args) {
