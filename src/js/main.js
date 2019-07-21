@@ -40,5 +40,5 @@ function initCamera(mediaModes, modeNumber=0) {
 
 function log(...args) {
     console.log(...args);
-    logArea.value = logArea.value + arguments + "\n";
+    logArea.value = logArea.value + JSON.stringify(arguments) + "\n";
 }
