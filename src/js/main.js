@@ -6,6 +6,7 @@ log("DOM Ready");
 
 playButton.addEventListener('click', function() {
     log("Starting video");
+
     if(navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
         var mediaModes = [
             { video: { facingMode: { exact: "environment"}}} ,
@@ -13,6 +14,8 @@ playButton.addEventListener('click', function() {
         ];
 
         initCamera(mediaModes);
+    } else {
+        log("Camera interface 'mediaDevices.getUserMedia' is unavailable");
     }
 });
 
