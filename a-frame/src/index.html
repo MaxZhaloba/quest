@@ -11,12 +11,12 @@
         <a-assets>
             <img id="groundTexture" src="textures/bricks1.jpg">
             <img id="sky" src="textures/sky.jpg"/>
+            <a-asset-item id="pouch" src="models/pouch/gltf/scene.gltf"/>
         </a-assets>
         <a-sky src="#sky"></a-sky>
         <a-plane src="#groundTexture" rotation="-90 0 0" width="30" height="30"
                  repeat="10 10"></a-plane>
-        <a-entity gltf-model="url(models/pouch/gltf/scene.gltf)"
-                  position="0 0 -2.5" scale="2 2 2"></a-entity>
+        <a-entity gltf-model="#pouch" position="0 0 -2.5" scale="2 2 2"></a-entity>
         <a-box color="teal" position="2 2 -5" rotation="0 45 45"/>
     </a-scene>
 </body>
