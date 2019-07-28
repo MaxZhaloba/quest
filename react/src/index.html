@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>3D Trip</title>
+    <script src="js/aframe.js"></script>
+    <script src="js/aframe-extras.min.js"></script>
+</head>
+<body>
+    <h1>3D content</h1>
+    <a-scene>
+        <a-assets>
+            <img id="photosphere" src="collections/trip1/textures/yard.jpg">
+            <a-asset-item id="model" src="collections/trip1/models/breakdance/scene.gltf"></a-asset-item>
+        </a-assets>
+        <a-sky src="#photosphere" rotation="0 180 0"></a-sky>
+        <a-entity gltf-model="#model" position="0 -5 -15" scale="0.06 0.06 0.06" animation-mixer></a-entity>
+        <a-box color="teal" position="5 5 -20" rotation="0 45 45"></a-box>
+    </a-scene>
+</body>
+</html>
