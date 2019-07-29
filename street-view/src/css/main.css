@@ -1,0 +1,15 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+#pano, #widget {
+    float: left;
+    height: 100%;
+    width: 50%;
+}
+
+#move {
+    display: block;
+}
