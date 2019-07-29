@@ -24,17 +24,14 @@
 
 <script>
       function initialize() {
-        var fenway = {lat: 48.2009188, lng: 16.3728305};
-
         var panorama = new google.maps.StreetViewPanorama(
             document.getElementById('pano'), {
-              position: fenway,
               pov: {
-                heading: 34,
+                heading: 15,
                 pitch: 10
               }
             });
-        map.setStreetView(panorama);
+        panorama.setPano('tjW_9p-_OzKrYxPRjmvyrQ');
       }
     </script>
 <script async defer
