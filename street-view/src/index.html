@@ -1,11 +1,44 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <title>Street View</title>
+    <meta charset="utf-8">
+    <title>Street View Side-By-Side</title>
+    <style>
+      html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+      #pano, #widget {
+        float: left;
+        height: 100%;
+        width: 50%;
+      }
+    </style>
 </head>
 <body>
-    <h1>Google Street View</h1>
-    <iframe src="https://www.google.com/maps/embed?pb=!4v1564398340996!6m8!1m7!1stjW_9p-_OzKrYxPRjmvyrQ!2m2!1d48.20286568406068!2d16.36906822963749!3f15.593032030660869!4f1.7338562350973348!5f0.7820865974627469" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+
+<h1>З використанням API і без</h1>
+<div id="pano"></div>
+<iframe id="widget" src="https://www.google.com/maps/embed?pb=!4v1564398340996!6m8!1m7!1stjW_9p-_OzKrYxPRjmvyrQ!2m2!1d48.20286568406068!2d16.36906822963749!3f15.593032030660869!4f1.7338562350973348!5f0.7820865974627469" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+
+<script>
+      function initialize() {
+        var fenway = {lat: 42.345573, lng: -71.098326};
+
+        var panorama = new google.maps.StreetViewPanorama(
+            document.getElementById('pano'), {
+              position: fenway,
+              pov: {
+                heading: 34,
+                pitch: 10
+              }
+            });
+        map.setStreetView(panorama);
+      }
+    </script>
+<script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=&callback=initialize">
+</script>
 </body>
 </html>
