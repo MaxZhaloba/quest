@@ -36,3 +36,10 @@
 
         moveToCurrentPlace();
     });
+
+    document.getElementById("headingSlider").addEventListener("input", function(){
+        var heading = parseInt(this.value);
+        // console.log("Rotating to ", heading);
+
+        panorama.setPov({ heading: heading, pitch: 0});
+    });
