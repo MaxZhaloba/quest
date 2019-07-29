@@ -6,7 +6,7 @@ html, body {
 
 #pano, #widget {
     float: left;
-    height: 100%;
+    height: 50%;
     width: 50%;
 }
 

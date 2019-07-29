@@ -4,11 +4,13 @@
         { panId: 'tjW_9p-_OzKrYxPRjmvyrQ', heading: 15, pitch: 0},
         { panId: 'CSKy2bwnay5X3alzAHEPFw', heading: 15, pitch: 0},
         { panId: 'CSKy2bwnay5X3alzAHEPFw', heading: -15, pitch: 15},
-        { panId: 'CSKy2bwnay5X3alzAHEPFw', heading: -15, pitch: 0},
-        { panId: 'r3d-ZzK2WMmJ0JXorfP4ng', heading: -30, pitch: 0},
-        { panId: 'r3d-ZzK2WMmJ0JXorfP4ng', heading: -45, pitch: 0},
-        { panId: 'r3d-ZzK2WMmJ0JXorfP4ng', heading: -60, pitch: 0},
-        { panId: 'r3d-ZzK2WMmJ0JXorfP4ng', heading: -75, pitch: 0}
+        { panId: 'CSKy2bwnay5X3alzAHEPFw', heading: -15, pitch: 45},
+        { panId: 'CSKy2bwnay5X3alzAHEPFw', heading: -15, pitch: 15},
+        { panId: 'r3d-ZzK2WMmJ0JXorfP4ng', heading: -30, pitch: 15},
+        { panId: 'r3d-ZzK2WMmJ0JXorfP4ng', heading: -45, pitch: 15},
+        { panId: 'r3d-ZzK2WMmJ0JXorfP4ng', heading: -60, pitch: 15},
+        { panId: 'r3d-ZzK2WMmJ0JXorfP4ng', heading: -75, pitch: 15},
+        { panId: 'r3d-ZzK2WMmJ0JXorfP4ng', heading: -90, pitch: 15}
     ];
 
       function initialize() {
